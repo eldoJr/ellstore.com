@@ -1,0 +1,137 @@
+/* ─── CTA ───────────────────────────────────────────────────────────────────── */
+
+.cta {
+  position: relative;
+  background: var(--color-inverse-bg);
+  overflow: hidden;
+  will-change: transform, opacity;
+}
+
+.cta__bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(157,141,127,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.cta__inner {
+  position: relative;
+  z-index: 1;
+  max-width: var(--container-2xl);
+  margin-inline: auto;
+  padding: var(--space-40) var(--space-16);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-8);
+}
+
+/* ─── Eyebrow ── */
+.cta__eyebrow {
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin: 0;
+}
+
+/* ─── Title ── */
+.cta__title {
+  font-size: clamp(3rem, 8vw, 7rem);
+  font-weight: 900;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  text-transform: uppercase;
+  color: var(--color-inverse-text);
+  margin: 0;
+}
+
+/* ─── Body ── */
+.cta__body {
+  font-size: var(--text-md);
+  line-height: var(--leading-loose);
+  color: rgba(251, 251, 249, 0.45);
+  max-width: 440px;
+  margin: 0;
+}
+
+/* ─── Actions ── */
+.cta__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  margin-top: var(--space-4);
+}
+
+.cta__btn {
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: var(--space-4) var(--space-10);
+  transition: background var(--duration-base) var(--ease-out),
+              color var(--duration-base) var(--ease-out),
+              border-color var(--duration-base) var(--ease-out);
+}
+
+.cta__btn--primary {
+  background: var(--color-inverse-text);
+  color: var(--color-inverse-bg);
+  border: var(--border-thin) solid var(--color-inverse-text);
+}
+
+.cta__btn--primary:hover {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-inverse-text);
+}
+
+.cta__btn--ghost {
+  background: transparent;
+  color: var(--color-inverse-text);
+  border: var(--border-thin) solid rgba(251, 251, 249, 0.2);
+}
+
+.cta__btn--ghost:hover {
+  border-color: var(--color-inverse-text);
+}
+
+/* ─── Note ── */
+.cta__note {
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wider);
+  color: rgba(251, 251, 249, 0.25);
+  text-transform: uppercase;
+  margin: 0;
+  margin-top: var(--space-4);
+}
+
+/* ─── Watermark ── */
+.cta__watermark {
+  position: absolute;
+  bottom: -0.15em;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: clamp(6rem, 20vw, 18rem);
+  font-weight: 900;
+  letter-spacing: var(--tracking-tight);
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(251, 251, 249, 0.04);
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  line-height: 1;
+}
+
+/* ─── Responsive ── */
+@media (max-width: 1024px) {
+  .cta__inner { padding: var(--space-32) var(--space-8); }
+}
+
+@media (max-width: 768px) {
+  .cta__inner   { padding: var(--space-24) var(--space-5); gap: var(--space-6); }
+  .cta__actions { flex-direction: column; width: 100%; }
+  .cta__btn     { width: 100%; text-align: center; padding: var(--space-4) var(--space-6); }
+}
