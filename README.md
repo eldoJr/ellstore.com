@@ -1,16 +1,51 @@
-# React + Vite
+# Ellstore
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A minimal fashion editorial storefront built with React and Vite.
 
-Currently, two official plugins are available:
+![Preview](image.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 19** + **Vite 8**
+- **Tailwind CSS v4** via `@tailwindcss/vite`
+- **shadcn/ui** (Base UI) — Dialog, Breadcrumb
+- **Motion** (Framer Motion v13) — scroll-driven animations, page transitions
+- **React Router v7** — client-side routing
+- **Inter** + **JetBrains Mono** — typography
 
-## Expanding the Oxlint configuration
+## Pages
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+| Route | Description |
+|---|---|
+| `/` | Home — Hero, Lookbook, Collection, Pillars, CTA |
+| `/collection` | Full collection with filters, sort, grid/list view |
+| `/archive` | Past seasons with category filter |
+| `/concierge` | Contact form |
+| `/about` | Brand story |
+| `/process` | How garments are made |
+| `/stockists` | Retail locations |
+| `/press` | Press contact |
+| `/sizing-guide` | Measurements and fit |
+| `/shipping` | Delivery information |
+| `/returns` | Return policy |
+| `/privacy` | Privacy policy |
+| `/terms` | Terms of service |
+| `/cookies` | Cookie policy |
+
+## Getting started
+
+```bash
+npm install
+npm run dev
+```
+
+## Commands
+
+```bash
+npm run dev      # development server
+npm run build    # production build
+npm run preview  # preview production build
+npm run lint     # run oxlint
+```
