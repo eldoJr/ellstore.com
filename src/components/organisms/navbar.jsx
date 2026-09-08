@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion, useScroll, useTransform } from 'motion/react'
+import { Link } from 'react-router-dom'
 import NavLogo    from '../atoms/navLogo'
 import NavLinks   from '../molecules/navLinks'
 import MenuToggle from '../molecules/menuToggle'
@@ -53,7 +54,7 @@ const navbar = () => {
           </div>
 
           <div className="navbar__actions">
-            <a href="#concierge" className="navbar__cta">Shop Now</a>
+            <Link to="/collection" className="navbar__cta">Shop Now</Link>
             <div className="navbar__mobile-toggle">
               <MenuToggle isOpen={menuOpen} onClick={() => setMenuOpen(v => !v)} />
             </div>
@@ -92,7 +93,7 @@ const navbar = () => {
               <MenuToggle isOpen={menuOpen} onClick={closeMenu} />
             </div>
             <NavLinks onLinkClick={closeMenu} />
-            <a href="#concierge" className="drawer__cta" onClick={closeMenu}>Shop Now</a>
+            <Link to="/collection" className="drawer__cta" onClick={closeMenu}>Shop Now</Link>
             <p className="drawer__tagline type-mono">SS25 — The Silent Interval</p>
           </motion.aside>
         )}

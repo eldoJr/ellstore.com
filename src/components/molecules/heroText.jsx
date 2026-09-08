@@ -1,4 +1,5 @@
 import { motion } from 'motion/react'
+import { Link } from 'react-router-dom'
 import HeroEyebrow from '../atoms/heroEyebrow'
 
 const fade = (delay = 0) => ({
@@ -23,12 +24,12 @@ const heroText = () => (
     </motion.p>
 
     <motion.div className="hero-actions" {...fade(0.9)}>
-      <a href="#collection" className="hero-cta hero-cta--primary">
+      <Link to="/collection" className="hero-cta hero-cta--primary">
         Shop the Collection
-      </a>
-      <a href="#lookbook" className="hero-cta hero-cta--ghost">
+      </Link>
+      <Link to="/#lookbook" className="hero-cta hero-cta--ghost">
         View Lookbook
-      </a>
+      </Link>
     </motion.div>
   </div>
 )

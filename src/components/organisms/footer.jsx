@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Reveal        from '../atoms/reveal'
 import FooterColumn  from '../molecules/footerColumn'
 import './footer.css'
@@ -6,28 +7,28 @@ const NAV_COLS = [
   {
     heading: 'Shop',
     links: [
-      { href: '#collection', label: 'Collection' },
-      { href: '#lookbook',   label: 'Lookbook'   },
-      { href: '#',           label: 'New Arrivals'},
-      { href: '#',           label: 'Archive'     },
+      { to: '/collection',  label: 'Collection'   },
+      { to: '/#lookbook',   label: 'Lookbook'     },
+      { to: '/collection',  label: 'New Arrivals' },
+      { to: '/archive',     label: 'Archive'      },
     ],
   },
   {
     heading: 'Company',
     links: [
-      { href: '#', label: 'About'    },
-      { href: '#', label: 'Process'  },
-      { href: '#', label: 'Stockists'},
-      { href: '#', label: 'Press'    },
+      { to: '/about',      label: 'About'     },
+      { to: '/process',    label: 'Process'   },
+      { to: '/stockists',  label: 'Stockists' },
+      { to: '/press',      label: 'Press'     },
     ],
   },
   {
     heading: 'Support',
     links: [
-      { href: '#', label: 'Sizing Guide'   },
-      { href: '#', label: 'Shipping'       },
-      { href: '#', label: 'Returns'        },
-      { href: '#concierge', label: 'Contact' },
+      { to: '/sizing-guide', label: 'Sizing Guide' },
+      { to: '/shipping',     label: 'Shipping'     },
+      { to: '/returns',      label: 'Returns'      },
+      { to: '/concierge',    label: 'Contact'      },
     ],
   },
 ]
@@ -79,9 +80,9 @@ const footer = () => (
           </nav>
 
           <nav className="footer__legal" aria-label="Legal links">
-            <a href="#" className="footer__legal-link type-mono">Privacy</a>
-            <a href="#" className="footer__legal-link type-mono">Terms</a>
-            <a href="#" className="footer__legal-link type-mono">Cookies</a>
+            <Link to="/privacy" className="footer__legal-link type-mono">Privacy</Link>
+            <Link to="/terms"   className="footer__legal-link type-mono">Terms</Link>
+            <Link to="/cookies" className="footer__legal-link type-mono">Cookies</Link>
           </nav>
         </div>
       </Reveal>

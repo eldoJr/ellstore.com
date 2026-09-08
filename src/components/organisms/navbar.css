@@ -70,6 +70,8 @@
 
 .nav-link:hover { color: var(--color-accent); }
 .nav-link:hover::after { width: 100%; }
+.nav-link--active { color: var(--color-accent); }
+.nav-link--active::after { width: 100%; background: var(--color-accent); }
 
 /* ─── Actions ── */
 .navbar__actions {

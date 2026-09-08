@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Reveal        from '../atoms/reveal'
 import SectionEyebrow from '../atoms/sectionEyebrow'
 import LookbookItem   from '../molecules/lookbookItem'
@@ -43,10 +44,10 @@ const lookbook = () => (
         </p>
       </Reveal>
       <Reveal delay={0.45}>
-        <a href="#collection" className="lookbook__link type-mono">
+        <Link to="/collection" className="lookbook__link type-mono">
           View Full Collection
           <span className="lookbook__link-arrow" aria-hidden="true">↗</span>
-        </a>
+        </Link>
       </Reveal>
     </div>
 

@@ -1,4 +1,5 @@
 import { useRef } from 'react'
+import { Link } from 'react-router-dom'
 import { motion, useScroll, useTransform } from 'motion/react'
 import Reveal from '../atoms/reveal'
 import './cta.css'
@@ -39,12 +40,12 @@ const cta = () => {
 
         <Reveal delay={0.45} y={24}>
           <div className="cta__actions">
-            <a href="#collection" className="cta__btn cta__btn--primary type-mono">
+            <Link to="/collection" className="cta__btn cta__btn--primary type-mono">
               Shop the Collection
-            </a>
-            <a href="#lookbook" className="cta__btn cta__btn--ghost type-mono">
+            </Link>
+            <Link to="/#lookbook" className="cta__btn cta__btn--ghost type-mono">
               View Lookbook
-            </a>
+            </Link>
           </div>
         </Reveal>
 

@@ -2,7 +2,7 @@ import { motion } from 'motion/react'
 import ProductPrice from '../atoms/productPrice'
 import ProductBadge from '../atoms/productBadge'
 
-const productCard = ({ src, name, price, badge, delay = 0 }) => (
+const productCard = ({ src, name, price, badge, slug, delay = 0, onQuickView }) => (
   <motion.article
     className="product-card"
     initial={{ opacity: 0, y: 48 }}
@@ -20,9 +20,11 @@ const productCard = ({ src, name, price, badge, delay = 0 }) => (
         transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
       />
       <div className="product-card__overlay">
-        <a href="#concierge" className="product-card__cta type-mono">
-          Quick View
-        </a>
+        {onQuickView ? (
+          <button className="product-card__cta type-mono" onClick={onQuickView}>
+            Quick View
+          </button>
+        ) : null}
       </div>
     </div>
 

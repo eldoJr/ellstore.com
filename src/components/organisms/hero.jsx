@@ -11,9 +11,9 @@ const hero = () => {
   const sectionRef = useRef(null)
   const { scrollYProgress } = useScroll({ target: sectionRef, offset: ['start start', 'end start'] })
 
-  /* fade + lift the whole section out as user scrolls away */
-  const opacity  = useTransform(scrollYProgress, [0, 0.6], [1, 0])
-  const y        = useTransform(scrollYProgress, [0, 0.6], ['0%', '8%'])
+  /* gentle fade — starts at 30% scroll, fully gone at 90% */
+  const opacity = useTransform(scrollYProgress, [0.3, 0.9], [1, 0])
+  const y       = useTransform(scrollYProgress, [0, 1],     ['0%', '4%'])
 
   return (
     <motion.section
