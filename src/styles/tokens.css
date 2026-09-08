@@ -1,0 +1,101 @@
+/* ─── Design Tokens ─────────────────────────────────────────────────────────── */
+
+:root {
+  /* Color */
+  --color-bg:           #FBFBF9;
+  --color-surface:      #F4F4F1;
+  --color-border:       #E2E0DB;
+  --color-text:         #121212;
+  --color-text-muted:   #6B6560;
+  --color-accent:       #9D8D7F;
+  --color-accent-dark:  #7A6D62;
+  --color-accent-light: #C4B8AE;
+  --color-inverse-bg:   #121212;
+  --color-inverse-text: #FBFBF9;
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, monospace;
+
+  --text-xs:   0.6875rem;   /* 11px */
+  --text-sm:   0.8125rem;   /* 13px */
+  --text-base: 1rem;        /* 16px */
+  --text-md:   1.125rem;    /* 18px */
+  --text-lg:   1.375rem;    /* 22px */
+  --text-xl:   1.75rem;     /* 28px */
+  --text-2xl:  2.5rem;      /* 40px */
+  --text-3xl:  3.5rem;      /* 56px */
+  --text-4xl:  5rem;        /* 80px */
+  --text-5xl:  7rem;        /* 112px */
+
+  --leading-tight:  1.05;
+  --leading-snug:   1.2;
+  --leading-normal: 1.5;
+  --leading-loose:  1.75;
+
+  --tracking-tight:  -0.04em;
+  --tracking-snug:   -0.02em;
+  --tracking-normal: 0em;
+  --tracking-wide:   0.08em;
+  --tracking-wider:  0.16em;
+  --tracking-widest: 0.24em;
+
+  /* Spacing */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.25rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+  --space-40: 10rem;
+  --space-48: 12rem;
+
+  /* Layout */
+  --container-sm:  640px;
+  --container-md:  768px;
+  --container-lg:  1024px;
+  --container-xl:  1280px;
+  --container-2xl: 1440px;
+
+  /* Border */
+  --radius-none: 0;
+  --radius-sm:   2px;
+  --radius-md:   4px;
+  --radius-lg:   8px;
+  --radius-full: 9999px;
+
+  --border-thin:   1px;
+  --border-base:   1.5px;
+  --border-thick:  2px;
+
+  /* Shadows */
+  --shadow-sm:  0 1px 3px rgba(18,18,18,0.06);
+  --shadow-md:  0 4px 16px rgba(18,18,18,0.08);
+  --shadow-lg:  0 12px 40px rgba(18,18,18,0.12);
+  --shadow-xl:  0 24px 64px rgba(18,18,18,0.16);
+
+  /* Motion */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-fast:   120ms;
+  --duration-base:   220ms;
+  --duration-slow:   400ms;
+
+  /* Grain texture */
+  --grain-opacity: 0.04;
+
+  /* Z-index scale */
+  --z-base:    0;
+  --z-raised:  10;
+  --z-overlay: 100;
+  --z-modal:   200;
+  --z-toast:   300;
+  --z-top:     400;
+}

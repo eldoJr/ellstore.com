@@ -1,0 +1,68 @@
+/* ─── Utilities ─────────────────────────────────────────────────────────────── */
+
+/* Dividers */
+.divider          { border: none; border-top: var(--border-thin) solid var(--color-border); }
+.divider-thick    { border: none; border-top: var(--border-thick) solid var(--color-text); }
+.divider-accent   { border: none; border-top: var(--border-base) solid var(--color-accent); }
+
+/* Borders */
+.border           { border: var(--border-thin) solid var(--color-border); }
+.border-text      { border: var(--border-thin) solid var(--color-text); }
+.border-accent    { border: var(--border-thin) solid var(--color-accent); }
+
+/* Whitespace sections */
+.section-xs  { padding-block: var(--space-8); }
+.section-sm  { padding-block: var(--space-12); }
+.section-md  { padding-block: var(--space-20); }
+.section-lg  { padding-block: var(--space-32); }
+.section-xl  { padding-block: var(--space-48); }
+
+/* Aspect ratios — editorial imagery */
+.ratio-square    { aspect-ratio: 1 / 1; }
+.ratio-portrait  { aspect-ratio: 3 / 4; }
+.ratio-landscape { aspect-ratio: 4 / 3; }
+.ratio-wide      { aspect-ratio: 16 / 9; }
+.ratio-editorial { aspect-ratio: 2 / 3; }
+
+/* Object fit */
+.img-cover  { width: 100%; height: 100%; object-fit: cover; display: block; }
+.img-contain { width: 100%; height: 100%; object-fit: contain; display: block; }
+
+/* Transitions */
+.transition-base {
+  transition-property: color, background-color, border-color, opacity, transform;
+  transition-duration: var(--duration-base);
+  transition-timing-function: var(--ease-out);
+}
+
+.transition-fast {
+  transition-property: color, background-color, border-color, opacity, transform;
+  transition-duration: var(--duration-fast);
+  transition-timing-function: var(--ease-out);
+}
+
+/* Hover lift */
+.hover-lift {
+  transition: transform var(--duration-base) var(--ease-out),
+              box-shadow var(--duration-base) var(--ease-out);
+}
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Truncate */
+.truncate-1 { overflow: hidden; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; }
+.truncate-2 { overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.truncate-3 { overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
+
+/* Visually hidden (a11y) */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}

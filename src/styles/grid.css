@@ -1,0 +1,70 @@
+/* ─── Grid System ───────────────────────────────────────────────────────────── */
+
+/* Base container */
+.container {
+  width: 100%;
+  max-width: var(--container-2xl);
+  margin-inline: auto;
+  padding-inline: var(--space-8);
+}
+
+@media (max-width: 768px) {
+  .container { padding-inline: var(--space-5); }
+}
+
+/* Standard 12-col grid */
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-6);
+}
+
+/* Brutalist asymmetric layouts */
+.grid-asymmetric-lg {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-6);
+}
+
+.grid-asymmetric-sm {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--space-6);
+}
+
+.grid-editorial {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  gap: var(--space-8);
+}
+
+.grid-product {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-6);
+}
+
+.grid-product-dense {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-4);
+}
+
+/* Offset / brutalist accent blocks */
+.grid-offset {
+  display: grid;
+  grid-template-columns: var(--space-16) 1fr;
+}
+
+/* Responsive collapse */
+@media (max-width: 1024px) {
+  .grid-editorial          { grid-template-columns: 1fr 2fr; }
+  .grid-asymmetric-lg,
+  .grid-asymmetric-sm      { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .grid-12                 { grid-template-columns: repeat(4, 1fr); gap: var(--space-4); }
+  .grid-editorial          { grid-template-columns: 1fr; }
+  .grid-offset             { grid-template-columns: 1fr; }
+}
